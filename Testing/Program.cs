@@ -10,34 +10,40 @@ namespace Testing
     {
         static void Main(string[] args)
         {
-            string str = "759";
-            Console.WriteLine(str);
-            IOrderedEnumerable<char> s = str.OrderByDescending(x => x);
-            
-            //string.Concat()
-            
-            
-            Console.WriteLine(str);
-            Console.ReadKey();
-
-
-
-
-
-            return;
             do
             {
-                Console.WriteLine("Введите число (q - выход):");
-                string numStr = Console.ReadLine();
-                if (numStr == "q") { break; }
-                else
-                {
-                    Console.WriteLine(Kata.DescendingOrder(int.Parse(numStr)));
-                    Console.WriteLine("----------");
-                }
+                Console.WriteLine("Введите значение:");
+                string val = Console.ReadLine();
+
+
             } while (true);
 
             //Console.ReadKey();
+        }
+
+        /// <summary>
+        /// новые знания
+        /// </summary>
+        void NewKnowledge()
+        {
+            char[] byteArray = new char[] { 'a', 'b', 'c' };
+            
+            // сортировка массива
+            Array.Sort(byteArray);
+            
+            // развернуть порядок значений в массиве
+            Array.Reverse(byteArray);
+            
+            // массива чаров склеивает в строку
+            string str = new string(byteArray);
+            
+            // сортировка символов в строке LINQ
+            IOrderedEnumerable<char> oe = str.OrderByDescending(x => x);
+            
+            // склеивание значний массива в строку
+            str.Concat(oe);
+            str.Concat(byteArray);
+
         }
     }
 }
