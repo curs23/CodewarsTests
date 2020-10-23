@@ -14,6 +14,14 @@ namespace Testing
             {
                 Console.WriteLine("Введите значение:");
                 string val = Console.ReadLine();
+                if (val == string.Empty) return;
+                long dig = long.Parse(val);
+
+
+
+                Console.WriteLine(DigitalRoot(dig));
+                Console.WriteLine(dig%9);
+
 
 
             } while (true);
@@ -21,29 +29,22 @@ namespace Testing
             //Console.ReadKey();
         }
 
-        /// <summary>
-        /// новые знания
-        /// </summary>
-        void NewKnowledge()
+        public static int DigitalRoot(long n)
         {
-            char[] byteArray = new char[] { 'a', 'b', 'c' };
-            
-            // сортировка массива
-            Array.Sort(byteArray);
-            
-            // развернуть порядок значений в массиве
-            Array.Reverse(byteArray);
-            
-            // массива чаров склеивает в строку
-            string str = new string(byteArray);
-            
-            // сортировка символов в строке LINQ
-            IOrderedEnumerable<char> oe = str.OrderByDescending(x => x);
-            
-            // склеивание значний массива в строку
-            str.Concat(oe);
-            str.Concat(byteArray);
+            if (n < 10) return (int)n;
+            var charArr = n.ToString().ToCharArray();
+            int sum = 0;
+            foreach (var dig in charArr)
+            {
+                sum += int.Parse(dig.ToString());
+            }
+            if (sum > 9) { return DigitalRoot(sum); }
+            return sum;
+        }
 
+        public static int Dr(long n)
+        {
+            return (int)(1 + (n - 1) % 9);
         }
     }
 }
