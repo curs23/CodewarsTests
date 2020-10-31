@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CodewarsTests
 {
-    class CreatePhone
+    class CreatePhoneKata
     {
         public static string CreatePhoneNumber(int[] numbers)
         {
@@ -22,7 +22,7 @@ namespace CodewarsTests
         [TestCase(new int[] { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }, ExpectedResult = "(111) 111-1111")]
         public static string FixedTest(int[] numbers)
         {
-            return CreatePhone.CreatePhoneNumber(numbers);
+            return CreatePhoneKata.CreatePhoneNumber(numbers);
         }
     }
 

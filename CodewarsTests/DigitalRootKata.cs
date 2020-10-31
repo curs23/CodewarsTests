@@ -5,7 +5,7 @@ using NUnit.Framework;
 
 namespace CodewarsTests
 {
-    class Number
+    class DigitalRootKata
     {
         public int DigitalRoot(long n)
         {
@@ -24,12 +24,12 @@ namespace CodewarsTests
     [TestFixture]
     class NumberTest
     {
-        private Number num;
+        private DigitalRootKata num;
 
         [SetUp]
         public void SetUp()
         {
-            num = new Number();
+            num = new DigitalRootKata();
         }
 
         [TearDown]

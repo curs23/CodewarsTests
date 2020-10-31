@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CodewarsTests
 {
-    class Sorter
+    class DescendingOrderKata
     {
         public static int DescendingOrder(int num)
         {
@@ -21,7 +21,7 @@ namespace CodewarsTests
         [Test]
         public void Test0()
         {
-            Assert.AreEqual(98521, Sorter.DescendingOrder(21589));
+            Assert.AreEqual(98521, DescendingOrderKata.DescendingOrder(21589));
         }
     }
 
